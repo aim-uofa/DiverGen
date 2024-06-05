@@ -74,10 +74,10 @@ We thank the following repos for their great works:
 If you find this project useful in your research, please consider cite:
 
 ```BibTeX
-@article{fan2024divergen,
+@inproceedings{fan2024divergen,
       title={DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data}, 
       author={Chengxiang Fan and Muzhi Zhu and Hao Chen and Yang Liu and Weijia Wu and Huaqi Zhang and Chunhua Shen},
-      journal={arXiv preprint arXiv:2405.10185},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
       year={2024}
 }
 ```

@@ -51,10 +51,10 @@ We thank the following repos for their great works:
 If you find this project useful in your research, please consider cite:
 
 ```BibTeX
-@article{zhu2024generative,
+@inproceedings{zhu2024generative,
       title={Generative Active Learning for Long-tailed Instance Segmentation}, 
       author={Muzhi Zhu and Chengxiang Fan and Hao Chen and Yang Liu and Weian Mao and Xiaogang Xu and Chunhua Shen},
-      journal={arXiv preprint arXiv:2406.02435},
+      booktitle={International Conference on Machine Learning},
       year={2024},
 }
 ```

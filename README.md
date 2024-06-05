@@ -15,17 +15,17 @@
 If you find this project useful in your research, please consider cite:
 
 ```BibTeX
-@article{fan2024divergen,
+@inproceedings{fan2024divergen,
       title={DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data}, 
       author={Chengxiang Fan and Muzhi Zhu and Hao Chen and Yang Liu and Weijia Wu and Huaqi Zhang and Chunhua Shen},
-      journal={arXiv preprint arXiv:2405.10185},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
       year={2024}
 }
 
-@article{zhu2024generative,
+@inproceedings{zhu2024generative,
       title={Generative Active Learning for Long-tailed Instance Segmentation}, 
       author={Muzhi Zhu and Chengxiang Fan and Hao Chen and Yang Liu and Weian Mao and Xiaogang Xu and Chunhua Shen},
-      journal={arXiv preprint arXiv:2406.02435},
+      booktitle={International Conference on Machine Learning},
       year={2024},
 }
 ```
