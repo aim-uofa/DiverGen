@@ -75,9 +75,10 @@ If you find this project useful in your research, please consider cite:
 
 ```BibTeX
 @inproceedings{fan2024divergen,
-      title={DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data}, 
-      author={Chengxiang Fan and Muzhi Zhu and Hao Chen and Yang Liu and Weijia Wu and Huaqi Zhang and Chunhua Shen},
-      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-      year={2024}
+  title={DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data},
+  author={Fan, Chengxiang and Zhu, Muzhi and Chen, Hao and Liu, Yang and Wu, Weijia and Zhang, Huaqi and Shen, Chunhua},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3986--3995},
+  year={2024}
 }
 ```
