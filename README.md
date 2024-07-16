@@ -7,6 +7,7 @@
 - [**BSGAL**](BSGAL) (ICML 2024) - Generative Active Learning for Long-tailed Instance Segmentation
 
 ## 📣 News
+- 2024.7 We have released the code of BSGAL!
 - 2024.5 BSGAL has been accepted to ICML 2024!
 - 2024.2 DiverGen has been accepted to CVPR 2024!
 

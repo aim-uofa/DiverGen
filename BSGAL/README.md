@@ -8,7 +8,7 @@
 [Yang Liu](https://scholar.google.com/citations?user=9JcQ2hwAAAAJ&hl=en)<sup>1</sup>, &nbsp; 
 [Weian Mao](https://scholar.google.com/citations?user=Qu-QXTsAAAAJ&hl=en)<sup>2 1</sup>, &nbsp;
 Xiaogang Xu<sup>3 1</sup>, &nbsp;
-[Chunhua Shen](https://cshen.github.io/)<sup>1†</sup>
+[Chunhua Shen](https://cshen.github.io/)<sup>1†</sup> 
 
 <sup>1</sup> [Zhejiang University](https://www.zju.edu.cn/english/), &nbsp;
 <sup>2</sup> [The University of Adelaide](https://www.adelaide.edu.au/), &nbsp;
@@ -29,11 +29,12 @@ Xiaogang Xu<sup>3 1</sup>, &nbsp;
 Recently, large-scale language-image generative models have gained widespread attention and many works have utilized generated data from these models to further enhance the performance of perception tasks. However, not all generated data can positively impact downstream models, and these methods do not thoroughly explore how to better select and utilize generated data. On the other hand, there is still a lack of research oriented towards active learning on generated data. In this paper, we explore how to perform active learning specifically for generated data in the long-tailed instance segmentation task. Subsequently, we propose BSGAL, a new algorithm that online estimates the contribution of the generated data based on gradient cache. BSGAL can handle unlimited generated data and complex downstream segmentation tasks effectively. Experiments show that BSGAL outperforms the baseline approach and effectually improves the performance of long-tailed segmentation.
 
 ## 📣 News
+- 2024.7 We have released the code of BSGAL!
 - 2024.5 BSGAL has been accepted to ICML 2024!
 
 ## 🗓️ TODO
-- [ ] Release codes
-- [ ] Release weights
+- [x] Release base codes
+- [x] Release weights
 
 ## 🖼️ Demo
 <div align="center">
@@ -41,7 +42,19 @@ Recently, large-scale language-image generative models have gained widespread at
 </div>
 
 <!-- ## 📊 Results -->
+## 📦 Getting Started
+Prepare the environment and dataset following [X-Paste](https://github.com/yoctta/xpaste).
 
+### Training 
+```bash
+bash launch.sh --config configs/BSGAL/BSGAL_R50.yaml
+```
+
+### Evaluation
+First download the weights from [Here](https://drive.google.com/drive/folders/1ezbXFvmist64wS2tDIvx1EGW_w6V4g-r?usp=drive_link)
+```bash
+bash launch.sh --config configs/BSGAL/BSGAL_R50.yaml --eval-only MODEL.WEIGHTS path/to/weights
+```
 
 ## 🤝 Acknowledgement
 We thank the following repos for their great works:
