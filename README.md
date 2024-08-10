@@ -10,6 +10,12 @@
 - 2024.7 We have released the code of BSGAL!
 - 2024.5 BSGAL has been accepted to ICML 2024!
 - 2024.2 DiverGen has been accepted to CVPR 2024!
+  
+## License
+For non-commercial academic use, this project is licensed under [the 2-clause BSD License](https://opensource.org/license/bsd-2-clause). 
+For commercial use, please contact [Chunhua Shen](chhshen@gmail.com).
+
+
 
 
 ## 🖊️ Citation
