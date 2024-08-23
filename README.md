@@ -19,21 +19,21 @@ For commercial use, please contact [Chunhua Shen](chhshen@gmail.com).
 
 
 ## 🖊️ Citation
-If you find this project useful in your research, please consider cite:
+If you find this project useful in your research, please cite:
 
 ```BibTeX
 @inproceedings{fan2024divergen,
-  title={DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data},
-  author={Fan, Chengxiang and Zhu, Muzhi and Chen, Hao and Liu, Yang and Wu, Weijia and Zhang, Huaqi and Shen, Chunhua},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={3986--3995},
-  year={2024}
+  title = {DiverGen: Improving Instance Segmentation by Learning Wider Data Distribution with More Diverse Generative Data},
+  author= {Fan, Chengxiang and Zhu, Muzhi and Chen, Hao and Liu, Yang and Wu, Weijia and Zhang, Huaqi and Shen, Chunhua},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages = {3986--3995},
+  year  = {2024}
 }
 
 @inproceedings{zhu2024generative,
-      title={Generative Active Learning for Long-tailed Instance Segmentation}, 
-      author={Muzhi Zhu and Chengxiang Fan and Hao Chen and Yang Liu and Weian Mao and Xiaogang Xu and Chunhua Shen},
-      booktitle={International Conference on Machine Learning},
-      year={2024},
+      title  = {Generative Active Learning for Long-tailed Instance Segmentation}, 
+      author = {Muzhi Zhu and Chengxiang Fan and Hao Chen and Yang Liu and Weian Mao and Xiaogang Xu and Chunhua Shen},
+      booktitle = {International Conference on Machine Learning},
+      year  = {2024},
 }
 ```
