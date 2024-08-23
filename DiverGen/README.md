@@ -16,7 +16,7 @@ Huaqi Zhang<sup>2</sup>, &nbsp;
 <sup>*</sup> Equal contribution &nbsp;
 <sup>†</sup> Corresponding author
 
-[`Paper`](https://arxiv.org/abs/2405.10185) | [`Slides`](https://cvpr.thecvf.com/media/cvpr-2024/Slides/30504.pdf) | [`BibTeX`](#CitingDiverGen) | [`LICENSE`](../LICENSE)
+[`Paper`](https://arxiv.org/abs/2405.10185) | [`Slides`](https://cvpr.thecvf.com/media/cvpr-2024/Slides/30504.pdf) | [`BibTeX`](#CitingDiverGen)
 </div>
 
 ## 🚀 Overview
