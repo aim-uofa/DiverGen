@@ -71,7 +71,7 @@ We thank the following repos for their great works:
 - [CLIP](https://github.com/openai/CLIP)
 
 ## <a name="CitingDiverGen"></a> 🖊️ Citation
-If you find this project useful in your research, please consider cite:
+If you find this project useful in your research, please cite:
 
 ```BibTeX
 @inproceedings{fan2024divergen,
