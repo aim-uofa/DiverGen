@@ -17,7 +17,7 @@ Xiaogang Xu<sup>3 1</sup>, &nbsp;
 <sup>*</sup> Equal contribution &nbsp;
 <sup>†</sup> Corresponding author
 
-[`Paper`](https://arxiv.org/abs/2406.02435) | [`BibTeX`](#CitingBSGAL) | [`LICENSE`](../LICENSE)
+[`Paper`](https://arxiv.org/abs/2406.02435) | [`BibTeX`](#CitingBSGAL) 
 </div>
 
 ## 🚀 Overview
@@ -61,7 +61,7 @@ We thank the following repos for their great works:
 - [X-Paste](https://github.com/yoctta/xpaste)
 
 ## <a name="CitingBSGAL"></a> 🖊️ Citation
-If you find this project useful in your research, please consider cite:
+If you find this project useful in your research, please cite:
 
 ```BibTeX
 @inproceedings{zhu2024generative,
