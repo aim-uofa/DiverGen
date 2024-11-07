@@ -1,0 +1,43 @@
+_BASE_: "./Base-C2_L_R5021k_640b64_4x.yaml"
+MODEL:
+  ROI_HEADS:
+    NUM_CLASSES: 1453
+  ROI_BOX_HEAD:
+    CAT_FREQ_PATH: "datasets/metadata/ImageNet2012_filtered04_lvis_v1_train_cat_info_250.json"
+    USE_ZEROSHOT_CLS: false
+    FED_LOSS_FREQ_WEIGHT: 0.5
+  WEIGHTS: "models/swin_large_patch4_window12_384_22k.pkl"
+  BACKBONE:
+    NAME: build_swintransformer_fpn_backbone
+  SWIN:
+    SIZE: L-22k-384
+  FPN:
+    IN_FEATURES: ["swin1", "swin2", "swin3"]
+  CENTERNET:
+    NUM_CLASSES: 1453
+SOLVER:
+  MAX_ITER: 180000
+  CHECKPOINT_PERIOD: 10000
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.0001
+  MODEL_EMA: 0.999
+DATASETS:
+  TRAIN: ("lvis_v1_train",)
+  TEST: ("lvis_v1_val",)
+
+INPUT:
+  INST_POOL: true
+  INST_POOL_PATH: "/LVIS_instance_pools.json"
+  INST_POOL_FORMAT: "RGBA"
+  USE_COPY_METHOD: "syn_copy"
+  USE_INSTABOOST: false
+  MASK_FORMAT: bitmask
+  CP_METHOD: ['basic']
+  RANDOM_ROTATE: false
+  INST_POOL_SAMPLE_TYPE: "cas_random"
+  TRAIN_SIZE: 896
+  RANDOM_SCALE_MIN: 0.05
+  RANDOM_SCALE_MAX: 0.3
+  RANDOM_SCALE_MIN_SIZE: 3
+  USE_IMGNET: true
+SEED: 42

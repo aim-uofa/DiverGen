@@ -32,11 +32,12 @@ To address these issues, we introduce a more efficient strategy to construct gen
 thus mitigating overfitting. Additionally, we find that the diversity of generative data is crucial for improving model performance and enhance it through various strategies, including category diversity, prompt diversity, and generative model diversity. With these strategies, we can scale the data to millions while maintaining the trend of model performance improvement. On the LVIS dataset, DiverGen significantly outperforms the strong model X-Paste, achieving +**1.1** box AP and +**1.1** mask AP across all categories, and +**1.9** box AP and +**2.5** mask AP for rare categories.
 
 ## 📣 News
+- 2024.11 We have released the code of DiverGen!
 - 2024.2 DiverGen has been accepted to CVPR 2024!
 
 ## 🗓️ TODO
-- [ ] Release codes
-- [ ] Release weights
+- [x] Release codes
+- [x] Release weights
 
 ## 🖼️ Demo
 <div align="center">
@@ -57,11 +58,58 @@ thus mitigating overfitting. Additionally, we find that the diversity of generat
 
 
 ### Comparison with previous methods on LVIS val set
- Method              | Backbone        | $\text{AP}^{box}$ | $\text{AP}^{mask}$ | $\text{AP}_r^{box}$ | $\text{AP}_r^{mask}$ 
-:-------------------:|:---------------:|:----------------:|:------------------:|:-------------------:|:--------------------:              
- [CenterNet2](https://arxiv.org/abs/2103.07461)          | Swin-L          | 47.5             | 42.3               | 41.4                | 36.8                 
- [X-Paste](https://arxiv.org/abs/2212.03863)             | Swin-L          | 50.1             | 44.4               | 48.2                | 43.3                 
- **DiverGen (Ours)** | Swin-L          | **51.2**         | **45.5**           | **50.1**            | **45.8**    
+ Method              | Backbone        | $\text{AP}^{box}$ | $\text{AP}^{mask}$ | $\text{AP}_r^{box}$ | $\text{AP}_r^{mask}$ | Checkpoint
+:-------------------:|:---------------:|:----------------:|:------------------:|:-------------------:|:--------------------: |:--------------------: 
+ [CenterNet2](https://arxiv.org/abs/2103.07461)          | Swin-L          | 47.5             | 42.3               | 41.4                | 36.8                 | [Google Drive](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing)
+ [X-Paste](https://arxiv.org/abs/2212.03863)             | Swin-L          | 50.1             | 44.4               | 48.2                | 43.3                 | [Google Drive](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing)
+ **DiverGen (Ours)** | Swin-L          | **51.2**         | **45.5**           | **50.1**            | **45.8**    | [Google Drive](https://drive.google.com/file/d/1c8O0zvLCRk7CwjJNX9Pdw-Bu2QJ4gTDx/view?usp=sharing)
+
+
+## 📓 Requirements
+
+```
+conda create -n divergen python=3.9
+conda activate divergen
+pip install -r requirements.txt
+```
+
+## 🔢 Data Acquisition
+### LVIS Dataset
+Download [LVIS](https://www.lvisdataset.org/dataset) dataset, place them under `DETECTRON2_DATASETS` following [Detectron2](https://github.com/facebookresearch/detectron2/tree/main/datasets).
+
+### Data Generation
+Please read [DATA.md](DATA.md) for data generation.
+
+## 🔥 Training
+Preliminary
+1. edit `INST_POOL_PATH` in config file as your instance pool json
+2. edit `DETECTRON2_DATASETS` in launch.sh as your dataset path
+
+```
+bash launch.sh --config-file configs/DiverGen_swinL.yaml
+```
+
+Truncate ImageNet parameters
+```python
+python -m torch.distributed.launch \
+    --nproc_per_node 1 \
+    --use_env \
+    tools/convert_imgnet_model_to_lvis.py \
+    --input_model_path IN_MODEL_PATH \
+    --output_model_path OUT_MODEL_PATH \
+    --input_num_category 1453 \
+    --output_num_category 1203 \
+    --dist \
+    --backend gloo
+```
+
+## 👟 Evaluation
+Preliminary
+1. edit `DETECTRON2_DATASETS` in launch.sh as your dataset path
+2. download [checkpoint](https://drive.google.com/file/d/1c8O0zvLCRk7CwjJNX9Pdw-Bu2QJ4gTDx/view?usp=sharing) and put it in `checkpoint/` folder
+```
+bash launch.sh --config-file configs/DiverGen_swinL.yaml --eval MODEL.WEIGHTS checkpoint/DiverGen_swinL.pth
+```
 
 ## 🤝 Acknowledgement
 We thank the following repos for their great works:
