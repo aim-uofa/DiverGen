@@ -148,7 +148,25 @@ python -m torch.distributed.launch \
     --dist
 ```
 
-#### 3.5 clean image pool
+#### 3.5 get results.json
+```python
+python -m torch.distributed.launch \
+    --nproc_per_node 1 \
+    --use_env \
+    filteration/get_clip_score.py \
+    --indir OUT_DIR_RE \
+    --in_lvis_json_path datasets/metadata/ImageNet2012_filtered04_lvis_v1_train_cat_info_250.json \
+    --outdir OUT_DIR_RE_SEG \
+    --stages II \
+    --n_samples 1024 \
+    --max_batch_size 100 \
+    --dist \
+    --in_mask_dir OUT_DIR_RE_SEG \
+    --seg_name background_m0 \
+    --use_mask
+```
+
+#### 3.6 clean image pool
 ```python
 python -m torch.distributed.launch \
     --nproc_per_node 1 \
