@@ -104,7 +104,7 @@ if __name__ == "__main__":
     parser.add_argument('--image_dir', type=str)
     parser.add_argument('--output_file', type=str)
     parser.add_argument('--filter_image_csv_path', type=str, default=None)
-    parser.add_argument('--min_clip', type=float, default=25)
+    parser.add_argument('--min_clip', type=float, default=0)
     parser.add_argument('--min_area', type=float, default=0.0)
     parser.add_argument('--max_area', type=float, default=1.0)
     parser.add_argument('--tolerance', type=float, default=1)

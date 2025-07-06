@@ -171,7 +171,7 @@ python -m torch.distributed.launch \
 python -m torch.distributed.launch \
     --nproc_per_node 1 \
     --use_env \
-    segment_methods/clean_pool_if.py \
+    filteration/clean_pool_if.py \
     --input_dir OUT_DIR_RE_SEG \
     --image_dir OUT_DIR_RE \
     --output_file OUT_DIR_RE_SEG/test_filter_0.6.json \
